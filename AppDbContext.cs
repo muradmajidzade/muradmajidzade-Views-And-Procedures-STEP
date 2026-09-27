@@ -40,7 +40,8 @@ namespace Views_And_Procedures_STEP
                                              .ToView("ShowActive");
 
             modelBuilder.Entity<EmployeeResult>()
-                                             .HasNoKey();
+                                             .HasNoKey()
+                                             .ToView(null);
         }
     }
 }

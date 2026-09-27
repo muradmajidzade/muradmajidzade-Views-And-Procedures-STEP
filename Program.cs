@@ -49,7 +49,7 @@ using (var context = new AppDbContext())
 
     //await context.Database.ExecuteSqlInterpolatedAsync($"EXEC UpdateEmployeeSalary @EmployeeId = {empId}, @NewSalary = {newSalary}");
 
-    //var employee = context.Employees.FirstOrDefault(e => e.Id == empId);
+    //var employee = context.Employees.AsNoTracking().FirstOrDefault(e => e.Id == empId);
 
     //if (employee != null)
     //{

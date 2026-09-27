@@ -95,6 +95,23 @@ namespace Views_And_Procedures_STEP.Migrations
                     b.ToView("ShowActive", (string)null);
                 });
 
+            modelBuilder.Entity("Views_And_Procedures_STEP.Entities.Views_And_Procedures.EmployeeResult", b =>
+                {
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Salary")
+                        .HasColumnType("int");
+
+                    b.ToTable((string)null);
+
+                    b.ToView(null, (string)null);
+                });
+
             modelBuilder.Entity("Views_And_Procedures_STEP.Entities.Employees", b =>
                 {
                     b.HasOne("Views_And_Procedures_STEP.Entities.Department", "Department")
